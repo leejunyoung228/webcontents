@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h3>도형 서식폼 만들기</h3>
+    <hr>
+    <form >
+        <fieldset>
+            <legend>도형 서식 입력</legend>
+            <label>
+                선종류
+                <select>
+                    <option value="1">선</option>
+                    <option value="2">원</option>
+                    <option value="3">사각형</option>
+                    <option value="4">삼각형</option>
+                </select>
+            </label>
+            <br>
+            <label>
+                선두께 : 
+                <input type="number" name="line" id="line" step="0.5" value="0.5" min="0">
+            </label>
+            <label>
+                색선 : 
+                <input type="color" name="color" id="color" value="#00FFFF">
+            </label>
+            <br>
+            <label>
+                투명도(0~100) : 
+                <input onchange="updateOpacityValue()" type="range" name="opacity" id="opacity" value="50" min="0" max="100">
+                현재 값 : <a name="opacity-value">50</a>
+            </label>
+        </fieldset>
+    </form>
+    <script>
+        function updateOpacityValue() {
+            const opacity = document.getElementById('opacity').value;
+            document.getElementsByName('opacity-value')[0].innerText = opacity;
+        }
+    </script>
+</body>
+</html>
