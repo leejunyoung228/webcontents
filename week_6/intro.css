@@ -1,0 +1,25 @@
+body {
+    background-color: aliceblue;
+}
+h1 {
+    color: brown;
+    text-align: center;
+}
+p {
+    font-family: "궁서체";
+    font-size: 1em;
+    text-indent: 1em;
+}
+a {
+    text-decoration: none;
+}
+nav > ul {
+    border: 1px dashed black;
+}
+h3 {
+    text-shadow: 3px 3px 5px gray;
+}
+footer {
+    border-radius: 5px;
+    background-color: orange;
+}
